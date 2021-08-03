@@ -2,12 +2,12 @@ const express =require("express");
 const dotenv=require("dotenv");
 const path=require("path");
 const mongoose=require("mongoose");
+dotenv.config();
 var cors = require('cors')
 const fileUpload=require('express-fileupload')
-
-
+const STRIPEKEY=process.env.STRIPEKEY
+const stripe =require("stripe")(STRIPEKEY)
 const app=express();
-dotenv.config();
 require("./db/connection")
 app.use(express.json());
 app.use(cors())

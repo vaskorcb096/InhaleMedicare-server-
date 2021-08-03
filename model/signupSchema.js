@@ -8,14 +8,32 @@ const signupSchema=new mongoose.Schema({
         required:true
 
     },
+    user_details:{
+        type:String,
+        default:"Filled This Filled", 
+    },
+    user_profession:{
+        type:String,  
+        default:"Filled This Filled", 
+    },
     email:{
         type:String,
-        required:true
+        required:true,
     },
     password :{
         type:String,
         required:true
 
+    },
+    parmanent_address:{
+        type:String,
+        default:"Filled This Filled", 
+       
+    },
+    current_address:{
+        type:String,
+        default:"Filled This Filled", 
+      
     },
     cppassword:{
         type:String,
@@ -33,6 +51,9 @@ const signupSchema=new mongoose.Schema({
         type:Date,
         default:Date.now,
 
+    },
+    image:{
+        type:String,
     }
 })
 

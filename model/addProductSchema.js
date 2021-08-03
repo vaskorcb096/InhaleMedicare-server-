@@ -34,7 +34,31 @@ const addProductSchema = new mongoose.Schema({
     type:String,
     required:true,
     
-  }
+  },
+  productReview:[
+    {
+        post:{
+          type: String,
+        },
+        email:{
+          type: String, 
+        },
+        date:{
+          type: String, 
+        },
+        image: {
+          type:String,
+          required: true,
+        },
+        user_name:{
+          type:String,
+          required: true,
+        }
+
+    },
+
+],
+ 
 
  
       /*name: 'Wheel Chair',
